@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ECO TRANSLATE — Subtítulos EN⇄ES en Vivo</title>
+<meta name="description" content="Transcripción y traducción en tiempo real EN⇄ES. Sin instalación, funciona en el navegador.">
+<meta property="og:title" content="ECO TRANSLATE — Subtítulos EN⇄ES en Vivo">
+<meta property="og:description" content="Transcripción y traducción en tiempo real EN⇄ES. Sin instalación, funciona en el navegador.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+     LANDING / MODE SELECTOR
+     ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+<div class="mode-selector" id="modeSelector">
+  <!-- Hero section with scrollable content -->
+  <div class="landing-hero-section">
+    <!-- Logo -->
+    <div class="landing-logo">
+      <svg class="landing-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="28" height="28" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
+        <circle cx="16" cy="12" r="3" fill="rgba(100,200,255,0.6)"/>
+        <path d="M 10 20 Q 16 24 22 20" stroke="rgba(100,200,255,0.4)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="landing-wordmark">ECO</div>
+    </div>
+
+    <!-- Description -->
+    <div class="landing-hero-desc">
+      Transcripción y traducción <strong>en tiempo real</strong><br>
+      <strong>Inglés ⇄ Español</strong> — Sin instalación, funciona en tu navegador
+    </div>
+
+    <!-- Live preview -->
+    <div class="landing-preview">
+      <div class="preview-header">
+        <div class="preview-dot"></div>
+        <div class="preview-label">EN VIVO</div>
+        <div style="margin-left: auto;"></div>
+        <div class="preview-wave">
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+          <div class="preview-wave-bar"></div>
+        </div>
+      </div>
+      <div class="preview-cols">
+        <div class="preview-col">
+          <div class="preview-col-en">Hello, how are you<span class="preview-cursor"></span></div>
+        </div>
+        <div class="preview-sep"></div>
+        <div class="preview-col">
+          <div class="preview-col-es">Hola, ¿cómo estás?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode buttons -->
+    <div style="display: flex; gap: 12px; margin-bottom: 32px;">
+      <button class="mode-button active" data-mode="captions">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="4" width="20" height="16" stroke="currentColor" stroke-width="2" rx="2"/>
+          <path d="M6 9h12M6 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Iniciar Subtítulos
+      </button>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="landing-scroll-cue" style="opacity: 0.5;">
+      <svg class="lsc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+      <div class="lsc-label">Más Información</div>
+    </div>
+  </div>
+
+  <!-- Extended landing content -->
+  <div class="landing-extended">
+    <!-- How it works -->
+    <div class="le-section">
+      <div class="le-section-eyebrow">¿Cómo Funciona?</div>
+      <div class="le-section-title">Tres Pasos Simples</div>
+      <div class="le-section-sub">Abre tu micrófono, habla en cualquier idioma y obtén traducción instantánea en vivo. Sin configuración, sin cuentas.</div>
+      
+      <div class="le-steps">
+        <div class="le-step">
+          <div class="le-step-num">01 — MICRÓFONO</div>
+          <div class="le-step-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="22" y="10" width="16" height="22" rx="4" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" fill="none"/>
+              <path d="M30 32 L30 42" stroke="rgba(100,200,255,0.6)" stroke-width="1.5"/>
+              <path d="M20 42 L40 42" stroke="rgba(100,200,255,0.6)" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="le-step-name">Activa el Micrófono</div>
+          <div class="le-step-desc">Haz clic y comienza a hablar. Funciona en tiempo real.</div>
+        </div>
+
+        <div class="le-step">
+          <div class="le-step-num">02 — TRANSCRIPCIÓN</div>
+          <div class="le-step-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20 L48 20 M12 30 L42 30 M12 40 L45 40" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="8" y="15" width="44" height="35" rx="2" stroke="rgba(100,200,255,0.3)" stroke-width="1" fill="none"/>
+            </svg>
+          </div>
+          <div class="le-step-name">Detecta el Idioma</div>
+          <div class="le-step-desc">ECO reconoce automáticamente EN/ES.</div>
+        </div>
+
+        <div class="le-step">
+          <div class="le-step-num">03 — TRADUCCIÓN</div>
+          <div class="le-step-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 20 L40 40 M40 20 L20 40" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="30" cy="30" r="20" stroke="rgba(100,200,255,0.3)" stroke-width="1" fill="none"/>
+            </svg>
+          </div>
+          <div class="le-step-name">Traducción Instantánea</div>
+          <div class="le-step-desc">Recibe la traducción en el otro idioma al instante.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use cases -->
+    <div class="le-section">
+      <div class="le-section-eyebrow">Casos de Uso</div>
+      <div class="le-section-title">Ideal Para</div>
+      <div class="le-cases">
+        <div class="le-case c-blue">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="18" width="36" height="28" rx="2" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" fill="none"/>
+              <circle cx="30" cy="32" r="6" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Eventos en Vivo</div>
+          <div class="le-case-desc">Subtítulos simultáneos para conferencias y streaming.</div>
+        </div>
+
+        <div class="le-case c-gold">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 20 L44 20 L50 32 L30 50 L10 32 Z" stroke="rgba(255,195,90,0.6)" stroke-width="1.5" fill="none"/>
+              <circle cx="30" cy="32" r="3" fill="rgba(255,195,90,0.6)"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Educación</div>
+          <div class="le-case-desc">Clases bilingües con transcripción en tiempo real.</div>
+        </div>
+
+        <div class="le-case c-green">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="18" stroke="rgba(100,220,160,0.6)" stroke-width="1.5" fill="none"/>
+              <path d="M20 30 L27 37 L40 24" stroke="rgba(100,220,160,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Accesibilidad</div>
+          <div class="le-case-desc">Subtítulos automáticos para personas sordas.</div>
+        </div>
+
+        <div class="le-case c-purple">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 12 L35 22 L46 24 L39 31 L40 42 L30 37 L20 42 L21 31 L14 24 L25 22 Z" stroke="rgba(180,130,255,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Contenido</div>
+          <div class="le-case-desc">Crea contenido multilingüe sin esfuerzo extra.</div>
+        </div>
+
+        <div class="le-case c-red">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 28 Q30 18 45 28 Q30 38 15 28" stroke="rgba(255,120,120,0.6)" stroke-width="1.5" fill="none"/>
+              <circle cx="25" cy="28" r="2" fill="rgba(255,120,120,0.6)"/>
+              <circle cx="35" cy="28" r="2" fill="rgba(255,120,120,0.6)"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Networking</div>
+          <div class="le-case-desc">Comunicación fluida en eventos con múltiples idiomas.</div>
+        </div>
+
+        <div class="le-case c-teal">
+          <div class="le-case-svg">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="14" width="36" height="32" rx="2" stroke="rgba(80,220,200,0.6)" stroke-width="1.5" fill="none"/>
+              <path d="M16 20 L44 20 M16 27 L44 27 M16 34 L40 34" stroke="rgba(80,220,200,0.4)" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="le-case-name">Documentación</div>
+          <div class="le-case-desc">Traduce documentos hablados al instante.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why ECO -->
+    <div class="le-section">
+      <div class="le-section-eyebrow">Por Qué ECO</div>
+      <div class="le-section-title">Las Mejores Ventajas</div>
+      <div class="le-why">
+        <div class="le-why-item">
+          <div class="le-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="rgba(100,200,255,0.6)" stroke-width="1.5"/>
+              <path d="M10 12 L12 14 L14 10" stroke="rgba(100,200,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="le-why-name">Completamente Gratuito</div>
+            <div class="le-why-desc">Sin suscripción, sin límites de tiempo, sin pagar nada.</div>
+          </div>
+        </div>
+        <div class="le-why-item">
+          <div class="le-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 17.5 L6 21 L7 14 L2 9 L9 8 Z" stroke="rgba(255,195,90,0.6)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="le-why-name">Sin Instalación</div>
+            <div class="le-why-desc">Abre en tu navegador y empieza inmediatamente.</div>
+          </div>
+        </div>
+        <div class="le-why-item">
+          <div class="le-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2 C6.5 2 2 6.5 2 12 S6.5 22 12 22 S22 17.5 22 12" stroke="rgba(100,220,160,0.6)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M12 6 V12 L16 14" stroke="rgba(100,220,160,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="le-why-name">Tiempo Real</div>
+            <div class="le-why-desc">Transcripción y traducción al instante, sin retrasos.</div>
+          </div>
+        </div>
+        <div class="le-why-item">
+          <div class="le-why-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="rgba(180,130,255,0.6)" stroke-width="1.5" fill="none"/>
+              <path d="M3 8 L21 8" stroke="rgba(180,130,255,0.6)" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="2" fill="rgba(180,130,255,0.6)"/>
+            </svg>
+          </div>
+          <div>
+            <div class="le-why-name">Privado</div>
+            <div class="le-why-desc">Tus datos se procesan en tu navegador, no en servidores.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="le-bottom-cta">
+      <div class="le-bottom-cta-title">¿Listo para Traducir en Vivo?</div>
+      <div class="le-bottom-cta-sub">Abre el editor de subtítulos y comienza a hablar. ECO hace el resto.</div>
+      <button class="mode-button active" data-mode="captions" style="margin-top: 12px;">
+        Abrir Subtítulos Ahora
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+     CAPTION AREA (main application)
+     ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+<div id="captionArea">
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="mode-button" data-mode="landing" title="Volver al inicio">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Atrás
+      </button>
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <div class="live-indicator">
+        <div class="live-dot"></div>
+        <span>EN VIVO</span>
+      </div>
+    </div>
+
+    <div class="toolbar-right">
+      <button id="tabAudioBtn" class="icon-button" title="Capturar audio de pestañas">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 9h10M7 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      
+      <button id="micButton" class="mic-button" title="Alternar micrófono">
+        <svg class="mic-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 16.91c-1.48 1.45-3.76 2.36-6 2.36s-4.51-.91-6-2.36m12-1.06V22"/>
+        </svg>
+      </button>
+
+      <button id="timerToggle" class="icon-button timer-toggle" title="Mostrar temporizador">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="13" r="9" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 9v4l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 1v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button id="settingsBtn" class="icon-button" title="Configuración de accesibilidad">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Caption viewport -->
+  <div class="caption-viewport">
+    <div class="caption-box">
+      <div class="caption-col en">
+        <div class="caption-text">Listo para transcribir...</div>
+      </div>
+      <div class="caption-divider"></div>
+      <div class="caption-col es">
+        <div class="caption-text">Listo para traducir...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+     ACCESSIBILITY PANEL (slide-out right)
+     ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+<div id="accPanel">
+  <div class="acc-header">
+    <div class="acc-title">⚙ Accesibilidad</div>
+    <div class="acc-close" id="accClose">
+      <svg class="acc-close-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="acc-section">
+    <div class="acc-section-title">Tamaño de Fuente</div>
+    <div class="acc-control">
+      <div class="acc-control-header">
+        <span class="acc-control-label">Tamaño</span>
+        <span class="acc-control-value" id="fontSizeValue">16px</span>
+      </div>
+      <input type="range" id="fontSizeInput" min="12" max="32" value="16" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="acc-section">
+    <div class="acc-section-title">Velocidad de Actualización</div>
+    <div class="acc-control">
+      <div class="acc-control-header">
+        <span class="acc-control-label">Delay</span>
+        <span class="acc-control-value" id="updateSpeedValue">1800ms</span>
+      </div>
+      <input type="range" id="updateSpeedInput" min="500" max="3000" step="100" value="1800" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="acc-section">
+    <div class="acc-section-title">Sensibilidad de Silencio</div>
+    <div class="acc-control">
+      <div class="acc-control-header">
+        <span class="acc-control-label">Sensibilidad</span>
+        <span class="acc-control-value" id="silenceSensValue">50%</span>
+      </div>
+      <input type="range" id="silenceSensInput" min="0" max="100" value="50" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="acc-section">
+    <div class="acc-section-title">Historial</div>
+    <button class="acc-button" id="clearHistoryBtn">Limpiar Historial</button>
+    <div id="translationHistory" class="timer-history" style="margin-top: 12px; max-height: 200px;">
+      <div class="timer-history-empty">Sin histórico</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+     TIMER PANEL (slide-out left)
+     ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+<div id="timerMenuWrap">
+  <div id="timerPanel">
+    <!-- Timer header -->
+    <div class="timer-header">
+      <div class="timer-title">⏱ Temporizador</div>
+      <div class="timer-close" id="timerClose">
+        <svg class="timer-close-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Timer display -->
+    <div class="timer-display-section">
+      <div id="timerBigDisplay">00:00:00</div>
+      <div id="timerStatus">Selecciona un tiempo</div>
+    </div>
+
+    <!-- Timer controls -->
+    <div class="timer-controls">
+      <!-- Presets -->
+      <div>
+        <div class="timer-custom-label">Presets Rápidos</div>
+        <div class="timer-presets">
+          <button class="preset-btn" data-minutes="5">5 min</button>
+          <button class="preset-btn" data-minutes="10">10 min</button>
+          <button class="preset-btn" data-minutes="15">15 min</button>
+          <button class="preset-btn" data-minutes="30">30 min</button>
+        </div>
+      </div>
+
+      <!-- Custom time -->
+      <div>
+        <div class="timer-custom-label">Tiempo Personalizado</div>
+        <div class="timer-inputs">
+          <input type="text" id="timerInputH" class="timer-input" maxlength="2" value="00" placeholder="00">
+          <span class="timer-sep">:</span>
+          <input type="text" id="timerInputM" class="timer-input" maxlength="2" value="00" placeholder="00">
+          <span class="timer-sep">:</span>
+          <input type="text" id="timerInputS" class="timer-input" maxlength="2" value="00" placeholder="00">
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="timer-actions">
+        <button id="timerStartBtn" class="timer-action-btn start">Iniciar</button>
+        <button id="timerPauseBtn" class="timer-action-btn" style="display: none;">Pausar</button>
+        <button id="timerResetBtn" class="timer-action-btn">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end .wrap -->
+
+<script src="script.js"></script>
+</body>
+</html>
